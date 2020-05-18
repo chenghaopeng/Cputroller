@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>static/bg.jpg</file>
+        <file>static/default.qss</file>
+    </qresource>
+    <qresource prefix="/static"/>
+</RCC>

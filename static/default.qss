@@ -1,0 +1,28 @@
+#MainWindow {
+    background-image: url(:/static/bg.jpg);
+    background-repeat: no-repeat;
+}
+
+QPushButton {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+QGroupBox {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 20px;
+}
+
+QGroupBox::title {
+    margin: 10px;
+}
+
+QGroupBox QLabel {
+    color: #dddddd;
+}

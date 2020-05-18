@@ -4,6 +4,7 @@
 #include <QTextStream>
 #include <QCoreApplication>
 #include <QDebug>
+#include <QFile>
 
 QString Utils::exec(const QString &cmd, QStringList args, QByteArray data) {
     QProcess *process = new QProcess;
@@ -30,6 +31,15 @@ QString Utils::sudo(const QString &cmd, QStringList args, QByteArray data) {
     return Utils::exec("pkexec", args, data);
 }
 
-QString writeSystemFile(const QString &filePath, const QString &text) {
+QString Utils::writeSystemFile(const QString &filePath, const QString &text) {
     return Utils::sudo("tee", QStringList() << filePath, text.toUtf8());
+}
+
+QString Utils::readFile(const QString &filePath) {
+    QFile file(filePath);
+    file.open(QIODevice::ReadOnly);
+    QTextStream stream(&file);
+    QString text = stream.readAll();
+    file.close();
+    return text;
 }
