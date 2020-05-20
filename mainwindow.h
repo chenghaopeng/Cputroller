@@ -17,6 +17,12 @@ public:
     
 private:
     Ui::MainWindow *ui;
+    QString cpuDir;
+    int updateTimer;
+    void update();
+    
+protected:
+    void timerEvent(QTimerEvent *event);
 };
 
 #endif // MAINWINDOW_H

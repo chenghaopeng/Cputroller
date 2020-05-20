@@ -9,6 +9,7 @@ public:
     static QString sudo(const QString &cmd, QStringList args = QStringList(), QByteArray data = QByteArray());
     static QString writeSystemFile(const QString &filePath, const QString &text);
     static QString readFile(const QString &filePath);
+    static bool isFileExist(const QString &filePath);
 };
 
 #endif // UTILS_H

@@ -63,7 +63,7 @@
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QProgressBar" name="progressBar">
+    <widget class="QProgressBar" name="prgCpuUsage">
      <property name="geometry">
       <rect>
        <x>100</x>
@@ -114,7 +114,7 @@
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="label_4">
+    <widget class="QLabel" name="lblCpuTemperature">
      <property name="geometry">
       <rect>
        <x>101</x>
@@ -130,7 +130,7 @@
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="label_5">
+    <widget class="QLabel" name="lblCpuFrequency">
      <property name="geometry">
       <rect>
        <x>101</x>
@@ -146,7 +146,7 @@
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="label_6">
+    <widget class="QLabel" name="lblCpuStrategy">
      <property name="geometry">
       <rect>
        <x>100</x>
@@ -181,7 +181,7 @@
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="btnStrategyPerformance">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -197,7 +197,7 @@
       <string>性能</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="btnStrategyOndemand">
      <property name="geometry">
       <rect>
        <x>140</x>
@@ -213,7 +213,7 @@
       <string>按需</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="btnStrategyPowersave">
      <property name="geometry">
       <rect>
        <x>230</x>
@@ -261,7 +261,7 @@
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="label_11">
+    <widget class="QLabel" name="lblFanSpeed">
      <property name="geometry">
       <rect>
        <x>101</x>
@@ -277,7 +277,7 @@
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_4">
+    <widget class="QPushButton" name="btnFanSpeedAuto">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -293,7 +293,7 @@
       <string>设为自动</string>
      </property>
     </widget>
-    <widget class="QSlider" name="horizontalSlider">
+    <widget class="QSlider" name="sdrFanSpeed">
      <property name="geometry">
       <rect>
        <x>40</x>

@@ -5,6 +5,7 @@
 #include <QCoreApplication>
 #include <QDebug>
 #include <QFile>
+#include <QDir>
 
 QString Utils::exec(const QString &cmd, QStringList args, QByteArray data) {
     QProcess *process = new QProcess;
@@ -42,4 +43,9 @@ QString Utils::readFile(const QString &filePath) {
     QString text = stream.readAll();
     file.close();
     return text;
+}
+
+bool Utils::isFileExist(const QString &filePath) {
+    QFileInfo fileInfo(filePath);
+    return fileInfo.isFile();
 }
