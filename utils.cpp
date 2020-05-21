@@ -7,9 +7,9 @@
 #include <QFile>
 #include <QDir>
 
-QString Utils::exec(const QString &cmd, QStringList args, QByteArray data) {
+QString Utils::exec(const QString &cmd, QByteArray data) {
     QProcess *process = new QProcess;
-    process->start(cmd, args);
+    process->start("/bin/bash", QStringList() << "-c" << cmd);
     
     if (!data.isEmpty()) {
         process->write(data);
@@ -27,13 +27,16 @@ QString Utils::exec(const QString &cmd, QStringList args, QByteArray data) {
     return res.readAll().trimmed();
 }
 
-QString Utils::sudo(const QString &cmd, QStringList args, QByteArray data) {
-    args.push_front(cmd);
-    return Utils::exec("pkexec", args, data);
+QString Utils::sudo(const QString &cmd, QByteArray data) {
+    return Utils::exec("pkexec " + cmd, data);
+}
+
+QString Utils::writeFile(const QString &filePath, const QString &text) {
+    return Utils::exec("tee " + filePath, text.toUtf8());
 }
 
 QString Utils::writeSystemFile(const QString &filePath, const QString &text) {
-    return Utils::sudo("tee", QStringList() << filePath, text.toUtf8());
+    return Utils::sudo("tee " + filePath, text.toUtf8());
 }
 
 QString Utils::readFile(const QString &filePath) {

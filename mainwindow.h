@@ -18,11 +18,19 @@ public:
 private:
     Ui::MainWindow *ui;
     QString cpuDir;
+    int cpuNumber;
     int updateTimer;
     void update();
+    void changeStrategy(QString strategy);
     
 protected:
     void timerEvent(QTimerEvent *event);
+private slots:
+    void on_btnFanSpeedAuto_clicked();
+    void on_sdrFanSpeed_sliderReleased();
+    void on_btnStrategyPerformance_clicked();
+    void on_btnStrategyOndemand_clicked();
+    void on_btnStrategyPowersave_clicked();
 };
 
 #endif // MAINWINDOW_H
