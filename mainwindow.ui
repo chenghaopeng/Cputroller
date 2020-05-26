@@ -316,7 +316,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Cputroller v1.0</string>
+     <string>Cputroller v1.1</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
